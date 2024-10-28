@@ -1,6 +1,6 @@
 connection: "maddy_argolis"
 
- include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+ #include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
@@ -19,4 +19,11 @@ connection: "maddy_argolis"
 #   }
 # }
 
-explore: pylookml {}
+explore: pylookml {
+
+}
+
+
+view: pylookml {
+  sql_table_name: `mm-looker-core-argolis.maddy_test_env.json_dynamic` ;;
+}
