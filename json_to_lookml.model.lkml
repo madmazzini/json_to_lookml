@@ -1,47 +1,47 @@
 connection: "maddy_argolis"
 
-    access_grant: client_1 { user_attribute: client_id
+    access_grant: client_id_1 { user_attribute: client_id
   allowed_values: [
     "1",
     ] }
-    access_grant: client_2 { user_attribute: client_id
+    access_grant: client_id_2 { user_attribute: client_id
   allowed_values: [
     "2",
     ] }
 
- explore: pylookml { 
-   
+ explore: pylookml {
+
    }
 
 
 view: pylookml {
   sql_table_name: `mm-looker-core-argolis.maddy_test_env.json_dynamic` ;;
-  
-  
-  dimension: KeyB { 
+
+
+  dimension: KeyB {
     type: string
-    required_access_grants: [ client_id_1,] 
+    required_access_grants: [ client_id_1,]
     sql: ${TABLE}.KeyB ;; }
-  dimension: KeyC { 
+  dimension: KeyC {
     type: string
-    required_access_grants: [ client_id_1,] 
+    required_access_grants: [ client_id_1,]
     sql: ${TABLE}.KeyC ;; }
-  dimension: KeyE { 
+  dimension: KeyE {
     type: string
-    required_access_grants: [ client_id_1,] 
+    required_access_grants: [ client_id_1,]
     sql: ${TABLE}.KeyE ;; }
-  dimension: KeyF { 
+  dimension: KeyF {
     type: string
-    required_access_grants: [ client_id_2,] 
+    required_access_grants: [ client_id_2,]
     sql: ${TABLE}.KeyF ;; }
-  dimension: KeyG { 
+  dimension: KeyG {
     type: string
-    required_access_grants: [ client_id_2,] 
+    required_access_grants: [ client_id_2,]
     sql: ${TABLE}.KeyG ;; }
-  dimension: KeyX { 
+  dimension: KeyX {
     type: string
-    required_access_grants: [ client_id_2,] 
+    required_access_grants: [ client_id_2,]
     sql: ${TABLE}.KeyX ;; }
-  
-  
+
+
   }
